@@ -194,6 +194,7 @@ public class Main {
                         if(Character.isDigit(character))    state = states.NUM1;
                         else if(character == '.')   state = states.IN_DOT;
                         else if(Character.toLowerCase(character) == 'e')   state = states.IN_E;
+                        else if(Character.isAlphabetic(character)||character==':') state = states.ERROR;
                         else state = states.DONE;
                         token += character;
                         tokenType = "INTEGER NUMBER";
